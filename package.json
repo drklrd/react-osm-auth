@@ -1,5 +1,5 @@
 {
-  "name": "react-osm-auth",
+  "name": "react-osm-auth-test",
   "version": "0.1.0",
   "main": "lib/index.js",
   "dependencies": {
@@ -12,8 +12,7 @@
     "start": "react-scripts start",
     "build": "babel src -d lib",
     "prepare": "npm run build",
-    "publish" : "npm run build",
-    "prepublish" : "npm run build"
+    "publish" : "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
