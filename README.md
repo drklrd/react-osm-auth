@@ -1,4 +1,4 @@
-# react-osm-auth
+# react-osm-auth [![Build Status](https://travis-ci.org/drklrd/react-osm-auth.svg?branch=master)](https://travis-ci.org/drklrd/react-osm-auth)
 
 A React component for authentication with [OpenStreetMap](http://www.openstreetmap.org/). This is based on [osm-auth](https://github.com/osmlab/osm-auth) created by osmlab.
 
@@ -33,7 +33,7 @@ class Test extends React.Component {
 
 ### Required Landing page
 
-For this component to work(as with osm-auth by osmlab) , you need to add a HTML landing page for the Auth Popup. The default name for the popup is 'land.html' which is also include in this repo.
+For this component to work(as with osm-auth by osmlab) , you need to add a HTML landing page for the Auth Popup. The default name for the popup is 'land.html' and is also included in this repo.
 Add that html file in the same directory where your 'index.html' for the app resides. The "land.html" page should have the following content.
 
 ```html
