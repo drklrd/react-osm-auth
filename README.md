@@ -1,6 +1,6 @@
 # react-osm-auth
 
-A React component for authentication with [OpenStreetMap](http://www.openstreetmap.org/) over OAuth. This is based on [osm-auth](https://github.com/osmlab/osm-auth) created by osmlab.
+A React component for authentication with [OpenStreetMap](http://www.openstreetmap.org/). This is based on [osm-auth](https://github.com/osmlab/osm-auth) created by osmlab.
 
 ### Installation 
 
