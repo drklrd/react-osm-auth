@@ -55,3 +55,9 @@ Add that html file in the same directory where your 'index.html' for the app res
     </body>
 </html>
 ```
+
+### Available methods
+
+|name               |type      |description                                     |
+|-------------------|----------|------------------------------------------------|
+|onAuthenticated    |function  |Invoked on successful authentication of user    |
