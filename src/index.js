@@ -7,7 +7,7 @@ class App extends Component {
 
     constructor(props){
         super(props);
-        _osmAuthInstance = osmAuth(props);
+        _osmAuthInstance = osmAuth({ ... props });
         this.authenticate = this.authenticate.bind(this);
         this.logout = this.logout.bind(this);
         this.state = {
@@ -20,9 +20,12 @@ class App extends Component {
             method: 'GET',
             path: '/api/0.6/user/details'
         },(err,details)=>{
-            if(!err) this.setState({
-                authenticated : true
-            });
+            if(!err){
+                this.setState({
+                    authenticated : true
+                });
+                if(this.props.onAuthenticated) this.props.onAuthenticated(details);
+            }
         })
     }
 

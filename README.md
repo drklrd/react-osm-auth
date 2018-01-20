@@ -20,16 +20,24 @@ const options = {
     auto: true,
 };
 
+
 class Test extends React.Component {
+    
+  onAuthenticated(details){
+          console.log('details',details) // an XML DOM of user details
+  }
+  
   render() {
           return (
               <div>
-                  <ReactOSMAuth {...options} />
+                  <ReactOSMAuth {...options} onAuthenticated={this.onAuthenticated.bind(this)}/>
               </div>
           );
       }
 }
 ```
+
+This component also exposes 'onAuthenticated' method to handle user details on authentication.
 
 ### Required Landing page
 
