@@ -3,7 +3,7 @@ import osmAuth from 'osm-auth';
 
 let _osmAuthInstance = {};
 
-class App extends Component {
+class ReactOSMAuth extends Component {
 
     constructor(props){
         super(props);
@@ -13,6 +13,9 @@ class App extends Component {
         this.state = {
             authenticated : _osmAuthInstance.authenticated()
         };
+        if(_osmAuthInstance.authenticated() && this.props.authInstance){
+            this.props.authInstance(_osmAuthInstance);
+        }
     }
 
     authenticate(){
@@ -25,6 +28,7 @@ class App extends Component {
                     authenticated : true
                 });
                 if(this.props.onAuthenticated) this.props.onAuthenticated(details);
+                if(this.props.authInstance) this.props.authInstance(_osmAuthInstance);
             }
         })
     }
@@ -45,4 +49,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default ReactOSMAuth;

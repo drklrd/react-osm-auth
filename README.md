@@ -27,17 +27,29 @@ class Test extends React.Component {
           console.log('details',details) // an XML DOM of user details
   }
   
+  authInstance(authInstance){
+      console.log('>>>',authInstance) // authInstance of osm-auth
+  }
+  
   render() {
           return (
               <div>
-                  <ReactOSMAuth {...options} onAuthenticated={this.onAuthenticated.bind(this)}/>
+                  <ReactOSMAuth {...options} onAuthenticated={this.onAuthenticated.bind(this)} authInstance={this.authInstance.bind(this)}/>
               </div>
           );
       }
 }
 ```
 
-This component also exposes 'onAuthenticated' method to handle user details on authentication.
+This component exposes 'onAuthenticated' method to handle user details on authentication. 'authInstance' method acquires instance of osm-auth through which all original APIs in 'osmlab/osm-auth' can be consumed. For eg:
+```js
+    authInstance.xhr({
+        method: 'GET',
+        path: '/api/0.6/user/details'
+    }, function(err, details) {
+        ...
+    });
+```
 
 ### Required Landing page
 
@@ -61,3 +73,4 @@ Add that html file in the same directory where your 'index.html' for the app res
 |name               |type      |description                                     |
 |-------------------|----------|------------------------------------------------|
 |onAuthenticated    |function  |Invoked on successful authentication of user    |
+|authInstance       |function  |Acquires access to osm-auth instance            |
