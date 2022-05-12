@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "main": "lib/index.js",
   "dependencies": {
-    "osm-auth": "^1.0.2",
+    "osm-auth": "1.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0"
